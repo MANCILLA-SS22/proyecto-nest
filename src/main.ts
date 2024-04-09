@@ -1,4 +1,4 @@
-import { NestFactory } from '@nestjs/core'; //el método NestFactory crea el módulo principal a partir de un módulo. Este contendrá entonces las funcionalidades principales de nuestro aplicativo.
+import { NestFactory } from '@nestjs/core'; //El método NestFactory crea el módulo principal a partir de un módulo. Este contendrá entonces las funcionalidades principales de nuestro aplicativo.
 import { AppModule } from './app.module';
 
 async function bootstrap() {
