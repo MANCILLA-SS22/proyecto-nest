@@ -14,6 +14,14 @@ class UsersService {
     // Luego, declararemos una variable (privada) que represente el modelo que vamos a utilizar en los servicios, nota que el modelo utiliza el tipo de dato UsersDocument que creamos en el archivo del schema    
   }
 
+  async findAll() {
+    return await this.userModel.find({});
+  }
+
+  findOne(id: number) {
+    return `This action returns a #${id} user`;
+  }
+
   async create(createUserDto: CreateUserDto){
     // ahora podemos utilizar this.usersModel en cualquiera de nuestros archivos, y las operaciones de mongoose, a las que tanto estamos acostumbrados, permanecen idénticas.
     return await this.userModel.create(createUserDto)
@@ -21,14 +29,6 @@ class UsersService {
 
   probarRequest(createUserDto: CreateUserDto){
     return `This action creates a user`;
-  }
-
-  async findAll() {
-    return await this.userModel.find({});
-  }
-
-  findOne(id: number) {
-    return `This action returns a #${id} user`;
   }
 
   update(id: number, updateUserDto: UpdateUserDto) {
